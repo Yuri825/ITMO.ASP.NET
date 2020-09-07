@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Course.ASP.NET.Labs1,2,3,4", "ITMO.Course.ASP.NET.Labs\ITMO.Course.ASP.NET.Labs1,2,3,4.csproj", "{1A4643CF-4173-4877-9C81-E05D60048152}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO.Course.ASP.NET.Labs1,2,3,4,5", "ITMO.Course.ASP.NET.Labs\ITMO.Course.ASP.NET.Labs1,2,3,4,5.csproj", "{1A4643CF-4173-4877-9C81-E05D60048152}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
