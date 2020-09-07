@@ -11,7 +11,7 @@ namespace ITMO.Course.ASP.NET.Labs
 {
 
 
-    public partial class Summary
+    public partial class About
     {
     }
 }
