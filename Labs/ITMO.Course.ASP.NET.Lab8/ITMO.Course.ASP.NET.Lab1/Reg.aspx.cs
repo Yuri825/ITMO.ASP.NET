@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using System.Data.Entity;
 
 namespace ITMO.Course.ASP.NET.Lab1
 {
@@ -18,38 +19,50 @@ namespace ITMO.Course.ASP.NET.Lab1
                 if (!Page.IsValid) return;
 
                 GuestResponse rsvp = new GuestResponse(name.Text, email.Text, phone.Text, CheckBoxYN.Checked);
-                ResponseRepository.GetRepository().AddResponse(rsvp);
 
                 if (CheckBoxYN.Checked)
                 {
-                    Report report1 = new Report(TextBoxTitle.Text, TextBoxTextAnnot.Text); 
+                    Report report1 = new Report(TextBoxTitle.Text, TextBoxTextAnnot.Text);
                     rsvp.Reports.Add(report1);
                 }
 
-                if (TextBoxTitle2.Text != "" || TextBoxTextAnnot2.Text != "") 
-                { 
-                    Report report2 = new Report(TextBoxTitle2.Text, TextBoxTextAnnot2.Text); rsvp.Reports.Add(report2); 
+                if (TextBoxTitle2.Text != "" || TextBoxTextAnnot2.Text != "")
+                {
+                    Report report2 = new Report(TextBoxTitle2.Text, TextBoxTextAnnot2.Text);
+                    rsvp.Reports.Add(report2);
                 }
 
-                try 
-                { 
+                try
+                {
                     SampleContext context = new SampleContext();
                     context.GuestResponses.Add(rsvp);
-                    //context.SaveChanges(); 
-                } 
-                catch (Exception ex) 
-                { 
-                    Response.Redirect("Ошибка " + ex.Message); 
+                    context.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    Response.Redirect("Ошибка " + ex.Message);
                 }
 
-                if (rsvp.WillAttend.HasValue && rsvp.WillAttend.Value) 
+                ResponseRepository.GetRepository().AddResponse(rsvp);
+
+                if (rsvp.WillAttend.HasValue && rsvp.WillAttend.Value)
                 {
-                    Response.Redirect("seeyouthere.html"); 
-                } 
-                else 
-                { 
-                    Response.Redirect("sorryyoucantcome.html"); 
+                    Response.Redirect("seeyouthere.html");
                 }
+                else
+                {
+                    Response.Redirect("sorryyoucantcome.html");
+                }
+
+                
+              
+
+               
+
+               
+
+
+                
             }
 
         }
