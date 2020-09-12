@@ -8,7 +8,7 @@ namespace ITMO.Course.ASP.NET.Lab1
 {
     public class SampleContext : DbContext
     {
-        public SampleContext() : base("SeminarBD1") { }
+        public SampleContext() : base("SeminarBD2") { }
         public DbSet<GuestResponse> GuestResponses { get; set; }
         public DbSet<Report> Reports { get; set; }
     }
