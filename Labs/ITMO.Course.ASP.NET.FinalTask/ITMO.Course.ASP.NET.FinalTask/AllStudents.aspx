@@ -1,16 +1,13 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WorstFive.aspx.cs" Inherits="ITMO.Course.ASP.NET.FinalTask.WorstFive" MasterPageFile="~/Site.master"%>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AllStudents.aspx.cs" Inherits="ITMO.Course.ASP.NET.FinalTask.AllStudents" MasterPageFile="~/Site.master"%>
 <asp:Content ID="MainContent" ContentPlaceHolderID="ContentPlaceHolderMain" runat="server"> 
-    <h1 class="title">Худшие студенты</h1>
+    <h1 class="title">Студенты нашего Университета</h1>
     <div>
-        
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+         <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
             ConnectionString=
             "<%$ ConnectionStrings:Hogwards.mdfConnectionString %>" 
             SelectCommand=
-            "
-            SELECT TOP (5) [SurnameStudent], [NameStudent], [MiddlenameStudent], [Phone], 
-            [EmailStudent], [AchieveStudent] FROM [ListStudents]  ORDER BY [AchieveStudent]"
+            "SELECT [SurnameStudent], [NameStudent], [MiddlenameStudent], [LessonStudent], [EmailStudent], 
+             [Phone], [AchieveStudent] FROM [ListStudents] ORDER BY [SurnameStudent]"
         >
 
         </asp:SqlDataSource>
@@ -19,22 +16,15 @@
                 <asp:BoundField DataField="SurnameStudent" HeaderText="Фамилия" SortExpression="SurnameStudent" />
                 <asp:BoundField DataField="NameStudent" HeaderText="Имя" SortExpression="NameStudent" />
                 <asp:BoundField DataField="MiddlenameStudent" HeaderText="Отчество" SortExpression="MiddlenameStudent" />
-                <asp:BoundField DataField="Phone" HeaderText="Телефон" SortExpression="Phone" />
+                <asp:BoundField DataField="LessonStudent" HeaderText="Предмет" SortExpression="LessonStudent" />
                 <asp:BoundField DataField="EmailStudent" HeaderText="Email" SortExpression="EmailStudent" />
+                <asp:BoundField DataField="Phone" HeaderText="Телефон" SortExpression="Phone" />
                 <asp:BoundField DataField="AchieveStudent" HeaderText="Балл" SortExpression="AchieveStudent" />
             </Columns>
-            <HeaderStyle Height="50px" />
-        </asp:GridView>
+         </asp:GridView>
     </div>
+</asp:Content>
 
-    
-
-     </asp:Content>
 
         
-
-
-
-
-
-
+   

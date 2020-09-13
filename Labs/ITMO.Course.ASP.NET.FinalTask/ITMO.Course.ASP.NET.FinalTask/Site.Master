@@ -19,11 +19,12 @@
                     <td colspan="3" id="header">
                        
                            <ul class="menu"> 
-                               <li><a href="Start.aspx" target="_blank">Главная</a></li> 
-                               <li><a href="EnterStudents.aspx" target="_blank">Добавление студентов</a></li> 
-                               <li><a href="LessonsList.aspx" target="_blank">Список изучаемых предметов</a></li> 
-                               <li><a href="BestFive.aspx" target="_blank">Лучшие студенты</a></li> 
-                               <li><a href="WorstFive.aspx" target="_blank">Худшие студенты</a></li>
+                               <li><a href="Start.aspx">Главная</a></li> 
+                               <li><a href="EnterStudents.aspx">Добавление студентов</a></li> 
+                               <li><a href="LessonsList.aspx">Список изучаемых предметов</a></li> 
+                               <li><a href="AllStudents.aspx">Наши студенты</a></li> 
+                               <li><a href="BestFive.aspx">Лучшие студенты</a></li> 
+                               <li><a href="WorstFive.aspx"">Худшие студенты</a></li>
                            </ul> 
                      
                     
@@ -66,7 +67,8 @@
                            <ul class="footer_menu"> 
                                <li><a href="Start.aspx" target="_blank">Главная</a></li> 
                                <li><a href="EnterStudents.aspx" target="_blank">Добавление студентов</a></li> 
-                               <li><a href="LessonsList.aspx" target="_blank">Список изучаемых предметов</a></li> 
+                               <li><a href="LessonsList.aspx" target="_blank">Список изучаемых предметов</a></li>
+                               <li><a href="AllStudents.aspx">Наши студенты</a></li> 
                                <li><a href="BestFive.aspx" target="_blank">Лучшие студенты</a></li> 
                                <li><a href="WorstFive.aspx" target="_blank">Худшие студенты</a></li>
                            </ul> 

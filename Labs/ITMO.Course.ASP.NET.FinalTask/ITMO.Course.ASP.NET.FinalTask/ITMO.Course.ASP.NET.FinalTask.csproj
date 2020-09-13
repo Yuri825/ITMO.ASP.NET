@@ -75,6 +75,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AllStudents.aspx" />
     <Content Include="BestFive.aspx" />
     <Content Include="Global.asax" />
     <Content Include="EnterStudents.aspx" />
@@ -89,6 +90,13 @@
     <Content Include="WorstFive.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllStudents.aspx.cs">
+      <DependentUpon>AllStudents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllStudents.aspx.designer.cs">
+      <DependentUpon>AllStudents.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BestFive.aspx.cs">
       <DependentUpon>BestFive.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
